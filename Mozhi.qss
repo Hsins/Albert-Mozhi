@@ -1,0 +1,143 @@
+/*
+ * Theme    : MoZhi (Black)
+ * Author   : Hsins, https://github.com/hsins
+ * Contact  : hsinspeng@gmail.com
+ *
+ * Check http://doc.qt.io/qt-5/stylesheet-syntax.html, Especially the subtopics:
+ * The Style Sheet Syntax     (http://doc.qt.io/qt-5/stylesheet-syntax.html)
+ * Qt Style Sheets Reference  (http://doc.qt.io/qt-5/stylesheet-reference.html)
+ */
+
+/* 
+ * --------------------
+ * General Setting
+ * --------------------
+ */
+
+* {
+  border: none;
+  font-family:"DejaVu Sans";
+  font-weight: 200;
+  color : #000000;
+}
+
+/*
+ * --------------------
+ * Frame Setting
+ * --------------------
+ */
+
+#frame {
+  width: 800px;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  /* Workaround for Qt to get fixed size button*/
+  min-width:800px;
+  max-width:800px;
+}
+
+#inputLine {
+  font: 40px;
+  font-weight: 400;
+  padding: 10px;
+  color: rgba(255, 255, 255, 1);
+  selection-color: rgba(255, 255, 255, 1);
+  selection-background-color: rgba(110, 150, 180, 0.7);
+  border: none;
+  background-color: transparent;
+}
+
+#settingsButton {
+  border: none;
+  border-radius: 7px;
+  color: #555;
+  background-color: transparent;
+
+  /* Respect the frame border */
+  margin: 6px 6px 0px 0px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 10px;
+
+  /* Workaround for Qt to get fixed size button*/
+  min-width: 14px;
+  min-height: 14px;
+  max-width: 14px;
+  max-height: 14px;
+}
+
+#settingsButton:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+
+/*
+ * --------------------
+ * List View Setting
+ * --------------------
+ */
+
+QListView {
+  border: none;
+  color: rgba(255, 255, 255, 1);
+  background: transparent;
+}
+
+QListView::item:selected {
+  border: none;
+  color: rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 100, 0.5);
+}
+
+QListView QScrollBar:vertical  {
+  width: 5px;
+  background: transparent;
+}
+
+QListView QScrollBar::handle:vertical  {
+  background: #AAAAAA;
+  min-height: 24px;
+}
+
+QListView QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical,
+QListView QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical,
+QListView QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+  border: 0px;
+  width: 0px;
+  height: 0px;
+  background: transparent;
+}
+
+QListView#actionList {
+  font-size: 20px;
+}
+
+QListView#actionList::item{
+  height: 28px;
+}
+
+/*
+ * --------------------
+ * Result View Setting
+ * --------------------
+ */
+
+QListView#resultsList {
+  icon-size: 36px;
+  font: 28px;
+  background-color: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+QListView#resultsList::item{
+  height: 48px;
+  padding: 4px;
+  color: rgba(255, 255, 255, 0);
+}
+
+QListView#resultsList::item:selected{
+  border: none;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(110, 150, 180, 0.7);
+}
