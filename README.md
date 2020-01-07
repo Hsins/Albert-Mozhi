@@ -37,7 +37,7 @@ $ git clone https://github.com/Hsins/Albert-Mozhi.git
 
 ```bash
 # Copy Mozhi.qss to /usr/share/albert/org.albert.frontend.widgetboxmodel/themes
-$ cp Mozhi.qss /usr/share/albert/org.albert.frontend.widgetboxmodel/themes/
+$ cd Albert-Mozhi && cp Mozhi.qss /usr/share/albert/org.albert.frontend.widgetboxmodel/themes/
 ```
 
 3. Restart Albert & Change theme Mozhi
